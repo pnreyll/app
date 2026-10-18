@@ -1,0 +1,284 @@
+{
+  "theme": "dark_warm_roastery",
+  "archetype": "Archetype 1: Organic & Earthy meets High-Density Precision ERP (Warm Espresso, Terracotta Amber, Burnt Copper, Roasted Sand & Cream)",
+  "language": "tr-TR",
+  "currency": {
+    "primary": "TRY (₺)",
+    "supported": ["TRY", "USD", "EUR"],
+    "locale_format": "tr-TR (örn. 14.850,50 ₺)"
+  },
+  "typography": {
+    "import_statement": "@import \"@fontsource-variable/plus-jakarta-sans\";\n@import \"@fontsource-variable/lora\";",
+    "font_family_heading": "'Lora Variable', serif",
+    "font_family_sans": "'Plus Jakarta Sans Variable', sans-serif",
+    "font_family_mono": "'JetBrains Mono Variable', monospace",
+    "scale_px": {
+      "display": 56,
+      "h1": 40,
+      "h2": 28,
+      "h3": 22,
+      "body": 16,
+      "caption": 14
+    },
+    "rules": {
+      "headings": "font-serif tracking-tight font-semibold text-[#F5EDE4]",
+      "subheadings": "font-sans font-medium text-[#C8B8A6]",
+      "body": "font-sans text-base leading-relaxed text-[#EADCCE]",
+      "table_dense": "font-sans text-sm leading-snug",
+      "numeric_financial": "font-mono font-medium tracking-tight",
+      "labels": "uppercase font-sans text-xs tracking-[0.15em] font-semibold text-[#A89887]"
+    }
+  },
+  "colors": {
+    "surfaces": [
+      {
+        "name": "page",
+        "kind": "solid",
+        "bg": "#120D0A",
+        "on_bg": "#F5EDE4",
+        "on_bg_muted": "#A89887",
+        "roles": {
+          "link": "#E28743",
+          "error": "#E05345",
+          "success": "#4E9F6E",
+          "warning": "#E5A83B"
+        }
+      },
+      {
+        "name": "sidebar_and_headers",
+        "kind": "solid",
+        "bg": "#1A130E",
+        "on_bg": "#F5EDE4",
+        "on_bg_muted": "#9C8C7B",
+        "roles": {
+          "border": "#2D221A",
+          "active_nav": "#2B1B13",
+          "active_nav_text": "#F3A261"
+        }
+      },
+      {
+        "name": "panel_cards",
+        "kind": "solid",
+        "bg": "#1E1611",
+        "on_bg": "#F5EDE4",
+        "on_bg_muted": "#A89887",
+        "roles": {
+          "border": "#35271E",
+          "hover_border": "#543C2E",
+          "subtle_fill": "#261C15"
+        }
+      },
+      {
+        "name": "table_and_modals",
+        "kind": "solid",
+        "bg": "#1C140F",
+        "on_bg": "#F5EDE4",
+        "on_bg_muted": "#B5A594",
+        "roles": {
+          "row_hover": "#281D16",
+          "border": "#38291F",
+          "input_bg": "#140E0A"
+        }
+      },
+      {
+        "name": "badge_roast_light",
+        "kind": "solid",
+        "bg": "#3B2616",
+        "on_bg": "#F7CA88",
+        "on_bg_muted": "#E0B06B"
+      },
+      {
+        "name": "badge_roast_dark",
+        "kind": "solid",
+        "bg": "#281208",
+        "on_bg": "#DE9B72",
+        "on_bg_muted": "#C27E55"
+      },
+      {
+        "name": "badge_critical_alert",
+        "kind": "solid",
+        "bg": "#361412",
+        "on_bg": "#FCA5A5",
+        "on_bg_muted": "#F87171"
+      },
+      {
+        "name": "badge_positive_cash",
+        "kind": "solid",
+        "bg": "#132D1D",
+        "on_bg": "#86EFAC",
+        "on_bg_muted": "#4ADE80"
+      },
+      {
+        "name": "login_hero_panel",
+        "kind": "image",
+        "contrast_against": "#140E0A",
+        "guarantee": "scrim: linear-gradient(135deg, rgba(18,13,10,0.92) 0%, rgba(26,19,14,0.85) 60%, rgba(18,13,10,0.96) 100%)",
+        "on_bg": "#FAF5EF",
+        "on_bg_muted": "#C8B8A6",
+        "roles": {
+          "accent_quote": "#E28743",
+          "stat_value": "#F3A261"
+        }
+      }
+    ],
+    "accent": "#C96D2D",
+    "accent_hover": "#DF7D39",
+    "on_accent": "#FFFFFF",
+    "accent_secondary": "#D99B56",
+    "on_accent_secondary": "#120D0A"
+  },
+  "entry_surfaces": {
+    "/": "editorial ERP dashboard layout — warm espresso dark background, quick metrics row, live roast batch widget, cash flow chart, low green bean alert ticker, top wholesale CRM clients",
+    "/login": "branded split login — artisanal coffee roastery hero story & live metrics preview on left, warm card credentials login form on right"
+  },
+  "layout_and_navigation": {
+    "structure": "Sidebar + Sticky Top Bar + Dense Bento Command Center",
+    "sidebar": {
+      "width": "w-64",
+      "bg": "bg-[#1A130E] border-r border-[#2D221A]",
+      "sections": [
+        {
+          "group": "GENEL BAKIŞ",
+          "items": [
+            { "id": "dashboard", "label": "Yönetim Paneli (Dashboard)", "icon": "LayoutDashboard", "path": "/" }
+          ]
+        },
+        {
+          "group": "ERP & STOK",
+          "items": [
+            { "id": "products", "label": "Ürün Kataloğu & Fiyatlar", "icon": "Package", "path": "/products" },
+            { "id": "green_beans", "label": "Yeşil Çekirdek & Hammadde", "icon": "Bean", "path": "/green-beans" },
+            { "id": "materials", "label": "Ambalaj & Sarf Malzeme", "icon": "Boxes", "path": "/materials" },
+            { "id": "roasting", "label": "Kavurma & Üretim Takibi", "icon": "Flame", "path": "/roasting" },
+            { "id": "orders", "label": "Satış & Siparişler (B2B/B2C)", "icon": "ShoppingCart", "path": "/orders" }
+          ]
+        },
+        {
+          "group": "ÖN MUHASEBE",
+          "items": [
+            { "id": "finance_summary", "label": "Kasa & Banka Hesapları", "icon": "Landmark", "path": "/finance" },
+            { "id": "expenses", "label": "Gider Yönetimi", "icon": "Receipt", "path": "/expenses" },
+            { "id": "cari_accounts", "label": "Cari Hesaplar (Borç/Alacak)", "icon": "Users", "path": "/cari" },
+            { "id": "reports", "label": "Karlılık & Raporlar", "icon": "TrendingUp", "path": "/reports" }
+          ]
+        },
+        {
+          "group": "CRM & MÜŞTERİLER",
+          "items": [
+            { "id": "crm_customers", "label": "Müşteri Portföyü (CRM)", "icon": "Contact2", "path": "/crm" }
+          ]
+        }
+      ]
+    },
+    "top_bar": {
+      "height": "h-16",
+      "elements": [
+        "Chrono Coffee Roastery Markası & Şube Seçimi",
+        "Kritik Stok Uyarı Hapları (Low Stock Pill)",
+        "Para Birimi Çevirici / Güncel Kur Özeti (₺ / $ / €)",
+        "Hızlı Aksiyonlar: [+ Yeni Satış], [+ Kavurma Girişi], [+ Gider Ekle]",
+        "Admin Profil & Çıkış Yap"
+      ]
+    }
+  },
+  "modules_breakdown": {
+    "dashboard": {
+      "kpi_cards": [
+        { "title": "Bugünkü Toplam Satış", "unit": "₺", "trend": "+18.4% vs dün", "badge": "Nakit / Kart / Havale Dağılımı" },
+        { "title": "Aylık Net Kar (EBITDA)", "unit": "₺", "trend": "Kar Marjı: %34.2", "badge": "Gelir - Gider - COGS" },
+        { "title": "Kavrulan Kahve (Bu Ay)", "unit": "KG", "trend": "38 Farklı Roast Batch", "badge": "Kayıp Oranı: %14.8" },
+        { "title": "Kritik Hammadde Uyarısı", "unit": "Kalem", "badge": "Acil Sipariş Gereken 3 Lot", "variant": "warning" }
+      ],
+      "charts": [
+        "Haftalık Satış & Karlılık Eğrisi (Recharts AreaChart, Terracotta + Amber Gradients)",
+        "Gelir Dağılımı (B2B Toptan Kafe Satışları vs B2C Perakende/Online - Donut Chart)",
+        "Son Kavurma Parti Logları (Roast Batches Timeline)",
+        "Vadesi Yaklaşan Cari Alacaklar / Borçlar Tablosu"
+      ]
+    },
+    "erp_stock": {
+      "product_catalog": {
+        "fields": ["Ürün Adı", "SKU / Barkod", "Kategori (Espresso, Filtre, Single Origin, Blend, Ekipman)", "Birim (KG, 250g Paket, 1kg Paket, Adet)", "KDV Oranı (%1, %10, %20)", "B2C Perakende Fiyatı (₺)", "B2B Toptan Fiyatı (₺)", "Min. Sipariş Adedi", "Stok Miktarı"],
+        "features": ["Çoklu Fiyat Listesi", "Paketleme Boyutları", "Fiyat Geçmişi"]
+      },
+      "green_beans": {
+        "fields": ["Lot No", "Menşei (Etiyopya Yirgacheffe, Kolombiya Huila, Brezilya Cerrado vb.)", "Varyete (Geisha, Bourbon, Caturra)", "İşleme Metodu (Yıkanmış, Natural, Anaerobik, Honey)", "Tedarikçi", "Çuval Sayısı & Kalan KG", "Alış Fiyatı (Döviz + ₺ Maliyet)", "Nem Oranı (%)", "Kritik Stok Sınırı (KG)"],
+        "features": ["Kritik stokta otomatik kırmızı uyarı", "Tedarikçi borcuna otomatik entegrasyon", "Landed cost hesaplama"]
+      },
+      "materials": {
+        "items": ["250g Valfli Kahve Paketi", "1KG Fermuarlı Kraft Paket", "Özel Kargo Kutusu", "Chrono Etiket Rulosu", "Degassing Valfi"],
+        "fields": ["Malzeme Adı", "Kategori", "Tedarikçi", "Kalan Adet", "Birim Maliyet", "Kritik Seviye"]
+      },
+      "roasting_tracker": {
+        "workflow": "1. Yeşil çekirdek lotu seçilir (Örn. 30 kg Ethiopia) -> 2. Kavurma profili & kavurucu notu girilir -> 3. Çıkan kavrulmuş kahve KG girilir (Örn. 25.5 kg) -> 4. Sistem otomatik fire/loss oranını (%15.0) hesaplar -> 5. Yeşil stoktan 30 kg düşer, mamul kavrulmuş kahve stoğuna 25.5 kg ekler -> 6. Ürün paketleme ile entegre edilir.",
+        "fields": ["Kavurma No (Batch #)", "Tarih", "Kavurma Derecesi (City, Full City, Light Filter, Omni-Roast)", "Kullanılan Yeşil Kahve (KG)", "Elde Edilen Kavrulmuş Kahve (KG)", "Fire Oranı (%)", "Kavurma Makinesi / Isı Notları", "Hedef Ürün / Blend"]
+      },
+      "orders_and_sales": {
+        "fields": ["Sipariş No", "Müşteri / Cari", "Tür (B2B Toptan / B2C Perakende)", "Kalemler", "Toplam Tutar (₺, $, €)", "KDV Toplamı", "Ödeme Tipi (Nakit, Kredi Kartı, Banka Havalesi / EFT, Açık Hesap / Veresiye)", "Durum (Hazırlanıyor, Kargolandı, Teslim Edildi, İptal)", "Fatura / Fiş Durumu"],
+        "features": ["Anlık Stok Düşüşü", "PDF Satış Fişi / Fatura İndirme ve Yazdırma", "Veresiye seçiminde doğrudan Cari Alacak hesabına yazma"]
+      }
+    },
+    "finance_accounting": {
+      "income_and_expense": {
+        "categories": ["Kira & Tesis Giderleri", "Personel & Maaşlar", "Yeşil Çekirdek Tedarik", "Ambalaj & Kargo", "Elektrik / Su / Doğalgaz (Kavurma Fırını)", "Pazarlama & Reklam", "Vergi & Harçlar", "Diğer"],
+        "features": ["Fiş / Fatura Görseli veya Belge No ekleme", "KDV ayrıştırma", "Tekrarlayan giderler", "Ödeme kaynağı (Kasa / Banka hesabı seçimi)"]
+      },
+      "cari_accounts": {
+        "types": ["Müşteri (Alacak Hesapları)", "Tedarikçi (Borç Hesapları)"],
+        "fields": ["Ünvan / İsim", "Firma Türü (Kafe Zinciri, Butik Kafe, Son Tüketici, Çiftlik / İthalatçı)", "Vergi No / TCKN", "Bakiye Durumu (Borç / Alacak)", "Son İşlem Tarihi", "Özel Vade Günü", "İşlem Ekstresi (PDF/Yazdır)"]
+      },
+      "cash_and_bank": {
+        "accounts": ["Merkez Kasa (Nakit)", "Garanti BBVA Ticari TL", "İş Bankası USD Hesabı", "Akbank POS Hesabı"],
+        "features": ["Hesaplar arası transfer (Virman)", "Gün sonu kasa kapatma ve mutabakat"]
+      },
+      "profitability_reports": {
+        "metrics": ["Brüt Satış Geliri", "Satılan Malın Maliyeti (COGS - Yeşil Çekirdek + Ambalaj + Kavurma Enerjisi)", "Brüt Kar", "Operasyonel Giderler (OPEX)", "Net Faaliyet Karı", "Kahve Çeşidi Başına Kar Marjı (%)"]
+      }
+    },
+    "crm": {
+      "fields": ["Müşteri Adı / Firma", "İletişim (Telefon, E-posta, Adres, Şehir)", "Müşteri Segmenti (Sadık Kafe, Yeni B2B, B2C Abonman)", "Favori Çekirdekler & Damak Profili (Örn: Yıkanmış Afrika, Meyvemsi)", "Özel Anlaşmalı B2B Fiyat Grubu", "Toplam Sipariş Hacmi (₺ ve KG)", "Özel Notlar & Barista Tercihleri", "Son İletişim Tarihi"]
+    }
+  },
+  "ui_components_spec": {
+    "interactive_elements": {
+      "button_style": "rounded-lg font-medium transition-colors duration-150 border active:scale-[0.98]",
+      "primary_button": "bg-[#C96D2D] text-white hover:bg-[#DF7D39] border-[#B55F22] shadow-[0_2px_8px_rgba(201,109,45,0.3)]",
+      "secondary_button": "bg-[#261C15] text-[#F5EDE4] hover:bg-[#35271E] border-[#3D2E24]",
+      "destructive_button": "bg-[#3D1412] text-[#FCA5A5] hover:bg-[#521C1A] border-[#7F1D1D]",
+      "inputs": "bg-[#140E0A] border-[#38291F] text-[#F5EDE4] placeholder-[#7D6E60] focus:border-[#C96D2D] focus:ring-1 focus:ring-[#C96D2D] rounded-lg",
+      "table_style": "w-full text-left border-collapse text-sm text-[#EADCCE]",
+      "table_header": "bg-[#160F0B] text-[#A89887] uppercase text-xs font-semibold tracking-wider border-b border-[#2E2118]",
+      "table_row": "border-b border-[#281D16] hover:bg-[#231812] transition-colors"
+    },
+    "pdf_invoice_generator": {
+      "description": "Chrono Coffee House kurumsal logolu, QR kodlu, ürün kalemleri, KDV ve ödeme detayları içeren profesyonel termal fiş veya A4 fatura modal önizleme ve PDF indirme çıktısı.",
+      "styles": "Chrono Vintage Minimalist Coffee Invoice Layout (Print-ready CSS & html2pdf / standard window.print generator)"
+    }
+  },
+  "image_urls": {
+    "brand_and_hero": {
+      "login_roastery_cover": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjByb2FzdGVyeSUyMGJlYW5zJTIwZXNwcmVzc298ZW58MHx8fHwxNzkyMjg3MjA0fDA&ixlib=rb-4.1.0&q=85",
+      "roast_beans_dense": "https://images.unsplash.com/photo-1675306408031-a9aad9f23308?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHw0fHxjb2ZmZWUlMjByb2FzdGVyeSUyMGJlYW5zJTIwZXNwcmVzc298ZW58MHx8fHwxNzkyMjg3MjA0fDA&ixlib=rb-4.1.0&q=85",
+      "espresso_portafilter": "https://images.unsplash.com/photo-1553292218-4892c2e7e1ae?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxjb2ZmZWUlMjByb2FzdGVyeSUyMGJlYW5zJTIwZXNwcmVzc298ZW58MHx8fHwxNzkyMjg3MjA0fDA&ixlib=rb-4.1.0&q=85",
+      "green_beans_sack": "https://images.unsplash.com/photo-1770055592671-01c08cae22be?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHwzfHxjb2ZmZWUlMjBiZWFucyUyMGJ1cmxhcCUyMHNhY2t8ZW58MHx8fHwxNzkyMjg3MjA0fDA&ixlib=rb-4.1.0&q=85",
+      "roasted_sack_burlap": "https://images.unsplash.com/photo-1759850845347-6212839b541c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBiZWFucyUyMGJ1cmxhcCUyMHNhY2t8ZW58MHx8fHwxNzkyMjg3MjA0fDA&ixlib=rb-4.1.0&q=85"
+    }
+  },
+  "motion": {
+    "page_transition": "initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, ease: 'easeOut' }}",
+    "card_hover": "hover:border-[#543C2E] transition-all duration-200",
+    "modal_animation": "scale-up fade-in from 95% to 100% with spring physics"
+  },
+  "accessibility": {
+    "wcag_compliance": "WCAG AA (minimum 4.5:1 on body text, 3:1 on large numeric metrics)",
+    "data_testid_convention": "kebab-case semantic testids on all interactive buttons, inputs, tabs, search bars, modals and tables. e.g. data-testid='add-roast-batch-button', data-testid='sales-order-table', data-testid='invoice-download-btn'",
+    "keyboard_nav": "Full tab and enter navigation on forms, dropdowns, and modal dialogs"
+  },
+  "instructions_to_main_agent": [
+    "1. Chrono Coffee House ERP & CRM projesini Türkçe dilinde, zengin kahve kavurma hane ve cafe operasyon terimleriyle (Yeşil Çekirdek, Batch No, Fire Oranı, B2B Toptan Fiyatı, Cari Hesaplar, Kasa/Banka, Fatura PDF vb.) geliştirin.",
+    "2. Tek Admin kimlik doğrulaması (varsayılan admin@chronocoffee.com / admin123) sağlayın. Oturum yönetimi ile login ve ana dashboard arasında sorunsuz geçiş yapın.",
+    "3. Tüm kritik modülleri eksiksiz uygulayın: Dashboard (grafikli + uyarılar), Ürün Kataloğu, Yeşil Çekirdek Stok, Sarf Malzeme Stok, Kavurma Üretim Takibi (stoktan düşme/ekleme formülüyle), Sipariş & Satış (PDF fiş/fatura yazdırma desteğiyle), Gider Yönetimi, Cari Hesaplar (Müşteri/Tedarikçi Borç-Alacak takibi), Kasa & Banka Yönetimi, Karlılık Raporları ve CRM Müşteri Detayı.",
+    "4. Para birimi gösterimlerinde Türk Lirası (₺) formatını ana para birimi olarak kullanın, çoklu para birimi seçeneği ($ / €) ile dinamik dönüşüm destekleyin.",
+    "5. Tüm buton ve tablolarda belirtilen `data-testid` etiketlerini ekleyin ve responsive mobil menüyü unutmayın."
+  ]
+}

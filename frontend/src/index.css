@@ -1,0 +1,127 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/jetbrains-mono";
+@import "@fontsource-variable/lora";
+@import "@fontsource-variable/plus-jakarta-sans";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-heading: 'Lora Variable', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans Variable', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root, .dark {
+    --background: #120D0A;
+    --foreground: #F5EDE4;
+    --card: #1E1611;
+    --card-foreground: #F5EDE4;
+    --popover: #1C140F;
+    --popover-foreground: #F5EDE4;
+    --primary: #C96D2D;
+    --primary-foreground: #FFFFFF;
+    --secondary: #261C15;
+    --secondary-foreground: #F5EDE4;
+    --muted: #261C15;
+    --muted-foreground: #A89887;
+    --accent: #2B1B13;
+    --accent-foreground: #F3A261;
+    --destructive: #E05345;
+    --border: #35271E;
+    --input: #38291F;
+    --ring: #C96D2D;
+    --chart-1: #C96D2D;
+    --chart-2: #D99B56;
+    --chart-3: #4E9F6E;
+    --chart-4: #E5A83B;
+    --chart-5: #8C6A52;
+    --radius: 0.625rem;
+    --sidebar: #1A130E;
+    --sidebar-foreground: #F5EDE4;
+    --sidebar-primary: #C96D2D;
+    --sidebar-primary-foreground: #FFFFFF;
+    --sidebar-accent: #2B1B13;
+    --sidebar-accent-foreground: #F3A261;
+    --sidebar-border: #2D221A;
+    --sidebar-ring: #C96D2D;
+    color-scheme: dark;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+  html {
+    @apply font-sans;
+    }
+  h1, h2, h3 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-xl border border-[#35271E] bg-[#1E1611] transition-[border-color] duration-200 hover:border-[#543C2E];
+  }
+  .label-caps {
+    @apply text-[11px] font-semibold uppercase tracking-[0.15em] text-[#A89887];
+  }
+  .num {
+    @apply font-mono font-medium tracking-tight tabular-nums;
+  }
+  .native-select {
+    @apply h-9 w-full rounded-lg border border-[#38291F] bg-[#140E0A] px-3 text-sm text-[#F5EDE4] outline-none transition-[border-color,box-shadow] focus:border-[#C96D2D] focus:ring-1 focus:ring-[#C96D2D];
+  }
+}
+
+@keyframes steam {
+  0% { transform: translateY(4px) scaleY(0.9); opacity: 0; }
+  40% { opacity: 0.7; }
+  100% { transform: translateY(-10px) scaleY(1.1); opacity: 0; }
+}
+.animate-steam { animation: steam 2.6s ease-in-out infinite; }
+
+input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.8) sepia(0.4); }
